@@ -1,0 +1,133 @@
+\newcommand{\latex}{\LaTeX{ }}
+\renewcommand{\quote}[2]{
+\begin{flushright}
+\textit{"#1"}\\
+--- #2
+\end{flushright}
+}
+\newcommand{\ceil}[1]{\left\lceil #1 \right\rceil}
+\newcommand{\overarc}[1]{{\setbox9=\hbox{#1}\ooalign{\resizebox{\wd9}{\height}{\texttoptiebar{\phantom{A}}}\cr#1}}}
+\newcommand{\psqrt}[1]{\left(\sqrt{#1}\right)}
+\newcommand{\pfrac}[2]{\left(\frac{#1}{#2}\right)}
+\newcommand{\pdfrac}[2]{\left(\dfrac{#1}{#2}\right)}
+\newcommand{\ptan}[1]{\left(\tan(#1)\right)}
+\newcommand{\pcos}[1]{\left(\cos(#1)\right)}
+\newcommand{\psin}[1]{\left(\sin(#1)\right)}
+\newcommand{\ilim}[1]{\lim_{n=#1}^\infty}
+\newcommand{\dlim}{\displaystyle\lim}
+\newcommand{\isum}[1]{\sum_{n=#1}^\infty}
+\newcommand{\dsum}{\displaystyle\sum}
+\newcommand{\iprod}[1]{\prod_{n=#1}^\infty}
+\newcommand{\dprod}{\displaystyle\prod}
+\newcommand{\idlim}[1]{\dlim_{n=#1}^\infty}
+\newcommand{\idsum}[1]{\dsum_{n=#1}^\infty}
+\newcommand{\idprod}[1]{\dprod_{n=#1}^\infty}
+\newcommand{\su}[2]{\sum_{#1}^{#2}}
+\newcommand{\li}[2]{\lim_{#1}^{#2}}
+\newcommand{\pro}[2]{\prod_{#1}^{#2}}
+\newcommand{\dsu}[2]{\dsum_{#1}^{#2}}
+\newcommand{\dli}[2]{\dlim_{#1}^{#2}}
+\newcommand{\dpr}[2]{\dprod_{#1}^{#2}}
+\newcommand{\bpower}[2]{\left(#1\right)^{#2}}
+\newcommand{\tpower}[2]{#1^{\left(#2\right)}}
+\newcommand{\btpower}[2]{\left(#1\right)^{\left(#2\right)}}
+\newcommand{\systemf}[8]{
+\begin{align}
+#1 &= #2 \\
+#3 &= #4 \\
+#5 &= #6 \\
+#7 &= #8
+\end{align}
+}
+\newcommand{\psystemf}[8]{
+\begin{align}
+#1 &= #2, \\
+#3 &= #4, \\
+#5 &= #6, \\
+#7 &= #8.
+\end{align}
+}
+\newcommand{\systemth}[6]{
+\begin{align}
+#1 &= #2 \\
+#3 &= #4 \\
+#5 &= #6
+\end{align}
+}
+\newcommand{\psystemth}[6]{
+\begin{align}
+#1 &= #2, \\
+#3 &= #4, \\
+#5 &= #6.
+\end{align}
+}
+\newcommand{\systemtw}[4]{
+\begin{align}
+#1 &= #2 \\
+#3 &= #4
+\end{align}
+}
+\newcommand{\psystemtw}[4]{
+\begin{align}
+#1 &= #2, \\
+#3 &= #4.
+\end{align}
+}
+\newcommand{\eq}[2]{
+\begin{equation*}
+#1 = #2
+\end{equation*}
+}
+\newcommand{\peq}[2]{
+\begin{equation*}
+#1 = #2.
+\end{equation*}
+}
+\newcommand{\ceq}[2]{
+\begin{equation*}
+#1 = #2,
+\end{equation*}
+}
+\newcommand{\eqn}[2]{
+\begin{equation}
+#1 = #2
+\end{equation}
+}
+\newcommand{\peqn}[2]{
+\begin{equation}
+#1 = #2.
+\end{equation}
+}
+\newcommand{\ceqn}[2]{
+\begin{equation}
+#1 = #2,
+\end{equation}
+}
+\newcommand{\para}[2]{\overline{#1} \parallel \overline{#2}}
+\newcommand{\sur}[1]{\left(#1\right)}
+\newcommand{\lt}[1]{\text{ #1}}
+\newcommand{\rt}[1]{\text{#1 }}
+\newcommand{\lrt}[1]{\text{ #1 }}
+\newcommand{\asd}{, as desired.}
+\newenvironment{sproof}{\begin{subproof}[Subproof]}{\end{subproof}}
+\newenvironment{enum}{\begin{enumerate}}{\end{enumerate}}
+\newenvironment{enumbf}{\begin{enumerate}[font=\bfseries]}{\end{enumerate}}
+\newcommand{\inch}{\text{ in}}
+\newcommand{\cm}{\text{ cm}}
+\newcommand{\ft}{\text{ ft}}
+\newcommand{\mi}{\text{ mi}}
+\newcommand{\mm}{\text{ mm}}
+\newcommand{\kilo}{\text{ km}}
+\newcommand{\n}{\~{n}}
+\newcommand{\good}{{\color{green!60!black}\CheckmarkBold}}
+\newcommand{\bad}{{\color{red}\sffamily\bfseries X}}
+\newcommand{\ans}[5]{
+\bigskip
+
+$\textbf{(A) }#1 \qquad \textbf{(B) }#2 \qquad \textbf{(C) }#3 \qquad \textbf{(D) }#4 \qquad \textbf{(E) }#5$
+}
+\newcommand{\choice}[2]{\textbf{(#1) }#2}
+\newcommand{\bchoice}[2]{\boxed{\textbf{(#1) }#2}}
+\DeclareMathOperator{\arcsec}{arcsec}
+\DeclareMathOperator{\arccot}{arccot}
+\DeclareMathOperator{\arccsc}{arccsc}
