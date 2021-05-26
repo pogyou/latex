@@ -1,4 +1,5 @@
 \ProvidesPackage{kppog}
+% Packages
 \usepackage{cancel}
 \usepackage{kpfonts}
 \usepackage{framed}
@@ -7,197 +8,33 @@
 \usepackage{enumitem}
 \usepackage{asymptote}
 \usepackage{hyperref}
+% Macros
 \newcommand{\latex}{\LaTeX{ }}
+\newcommand{\ceil}[1]{\left\lceil #1 \right\rceil}
+\newcommand{\overarc}[1]{{\setbox9=\hbox{#1}\ooalign{\resizebox{\wd9}{\height}{\texttoptiebar{\phantom{A}}}\cr#1}}}
+\newcommand{\asd}{, as desired.}
+\newcommand{\n}{\~{n}}
+\DeclareMathOperator{\arcsec}{arcsec}
+\DeclareMathOperator{\arccot}{arccot}
+\DeclareMathOperator{\arccsc}{arccsc}
+\newcommand{\dd}[1]{\text{d}#1}
+\newcommand{\rep}[2]{\underbrace{#1}_{#2\text{ times}}}
+\newcommand{\spade}{\spadesuit}
+\newcommand{\heart}{\heartsuit}
+\newcommand{\dia}{\diamondsuit}
+\newcommand{\club}{\clubsuit}
+\newcommand{\soll}{\section*{Solution}}
+\newcommand{\nsection}[1]{\newpage\section{#1}}
+% Quotes, Notes & Figures
 \renewcommand{\quote}[2]{
 \begin{flushright}
 \textit{"#1"}\\
 --- #2
 \end{flushright}
 }
-\newcommand{\ceil}[1]{\left\lceil #1 \right\rceil}
-\newcommand{\overarc}[1]{{\setbox9=\hbox{#1}\ooalign{\resizebox{\wd9}{\height}{\texttoptiebar{\phantom{A}}}\cr#1}}}
-\newcommand{\psqrt}[1]{\left(\sqrt{#1}\right)}
-\newcommand{\pfrac}[2]{\left(\frac{#1}{#2}\right)}
-\newcommand{\pdfrac}[2]{\left(\dfrac{#1}{#2}\right)}
-\newcommand{\ptan}[1]{\left(\tan(#1)\right)}
-\newcommand{\pcos}[1]{\left(\cos(#1)\right)}
-\newcommand{\psin}[1]{\left(\sin(#1)\right)}
-\newcommand{\ilim}[1]{\lim_{n=#1}^\infty}
-\newcommand{\dlim}{\displaystyle\lim}
-\newcommand{\isum}[1]{\sum_{n=#1}^\infty}
-\newcommand{\dsum}{\displaystyle\sum}
-\newcommand{\iprod}[1]{\prod_{n=#1}^\infty}
-\newcommand{\dprod}{\displaystyle\prod}
-\newcommand{\idlim}[1]{\dlim_{n=#1}^\infty}
-\newcommand{\idsum}[1]{\dsum_{n=#1}^\infty}
-\newcommand{\idprod}[1]{\dprod_{n=#1}^\infty}
-\newcommand{\su}[2]{\sum_{#1}^{#2}}
-\newcommand{\li}[2]{\lim_{#1}^{#2}}
-\newcommand{\pro}[2]{\prod_{#1}^{#2}}
-\newcommand{\dsu}[2]{\dsum_{#1}^{#2}}
-\newcommand{\dli}[2]{\dlim_{#1}^{#2}}
-\newcommand{\dpr}[2]{\dprod_{#1}^{#2}}
-\newcommand{\bpower}[2]{\left(#1\right)^{#2}}
-\newcommand{\tpower}[2]{#1^{\left(#2\right)}}
-\newcommand{\btpower}[2]{\left(#1\right)^{\left(#2\right)}}
-\newcommand{\systemf}[8]{
-\begin{align}
-#1 &= #2 \\
-#3 &= #4 \\
-#5 &= #6 \\
-#7 &= #8
-\end{align}
-}
-\newcommand{\psystemf}[8]{
-\begin{align}
-#1 &= #2, \\
-#3 &= #4, \\
-#5 &= #6, \\
-#7 &= #8.
-\end{align}
-}
-\newcommand{\systemth}[6]{
-\begin{align}
-#1 &= #2 \\
-#3 &= #4 \\
-#5 &= #6
-\end{align}
-}
-\newcommand{\psystemth}[6]{
-\begin{align}
-#1 &= #2, \\
-#3 &= #4, \\
-#5 &= #6.
-\end{align}
-}
-\newcommand{\systemtw}[4]{
-\begin{align}
-#1 &= #2 \\
-#3 &= #4
-\end{align}
-}
-\newcommand{\psystemtw}[4]{
-\begin{align}
-#1 &= #2, \\
-#3 &= #4.
-\end{align}
-}
-\newcommand{\eq}[2]{
-\begin{equation*}
-#1 = #2
-\end{equation*}
-}
-\newcommand{\peq}[2]{
-\begin{equation*}
-#1 = #2.
-\end{equation*}
-}
-\newcommand{\ceq}[2]{
-\begin{equation*}
-#1 = #2,
-\end{equation*}
-}
-\newcommand{\eqn}[2]{
-\begin{equation}
-#1 = #2
-\end{equation}
-}
-\newcommand{\peqn}[2]{
-\begin{equation}
-#1 = #2.
-\end{equation}
-}
-\newcommand{\ceqn}[2]{
-\begin{equation}
-#1 = #2,
-\end{equation}
-}
-\newcommand{\para}[2]{\overline{#1} \parallel \overline{#2}}
-\newcommand{\sur}[1]{\left(#1\right)}
-\newcommand{\lt}[1]{\text{ #1}}
-\newcommand{\rt}[1]{\text{#1 }}
-\newcommand{\lrt}[1]{\text{ #1 }}
-\newcommand{\asd}{, as desired.}
-\newenvironment{sproof}{\begin{subproof}[Subproof]}{\end{subproof}}
-\newenvironment{enum}{\begin{enumerate}}{\end{enumerate}}
-\newenvironment{enumbf}{\begin{enumerate}[font=\textbf]}{\end{enumerate}}
-\newcommand{\inch}{\text{ in}}
-\newcommand{\cm}{\text{ cm}}
-\newcommand{\ft}{\text{ ft}}
-\newcommand{\mi}{\text{ mi}}
-\newcommand{\mm}{\text{ mm}}
-\newcommand{\kilo}{\text{ km}}
-\newcommand{\n}{\~{n}}
-\newcommand{\sat}[4]{
-\bigskip
-
-\noindent$\textbf{(A) }#1 \qquad \textbf{(B) }#2 \qquad \textbf{(C) }#3 \qquad \textbf{(D) }#4$
-}
-\newcommand{\choice}[2]{\textbf{(#1) }#2}
-\newcommand{\bchoice}[2]{\boxed{\textbf{(#1) }#2}}
-\DeclareMathOperator{\arcsec}{arcsec}
-\DeclareMathOperator{\arccot}{arccot}
-\DeclareMathOperator{\arccsc}{arccsc}
-\newcommand{\dd}[1]{\text{d}#1}
-\newcommand{\rep}[2]{\underbrace{#1}_{#2\text{ times}}}
-\newenvironment{altsoln}{\begin{proof}[Alternative Solution]}{\end{proof}}
-\newcommand{\spade}{\spadesuit}
-\newcommand{\heart}{\heartsuit}
-\newcommand{\dia}{\diamondsuit}
-\newcommand{\club}{\clubsuit}
-\newcommand{\tf}{\tfrac}
-\newcommand{\f}{\frac}
-\newcommand{\df}{\dfrac}
-\newcommand{\logg}[2]{\log_{#1} #2}
-\newcommand{\yes}{\color{green!60!black}{\sffamily\textbf\checkmark}}
-\newcommand{\no}{\color{red}{\sffamily\textbf X}}
-\newcommand{\maybe}{\color{black!40}{\sffamily\textbf ?}}
-\newcommand{\opn}{\operatorname} 
-\newcommand{\dmo}{\DeclareMathOperator} 
-\newcommand{\nc}{\newcommand}
-\newcommand{\rc}{\renewcommand}
-\newcommand{\cf}{\cfrac} 
-\newcommand{\SD}{\mathcal D}
-\newcommand{\SE}{\mathcal E}
-\newcommand{\SI}{\mathcal I}
-\newcommand{\SJ}{\mathcal J}
-\newcommand{\SK}{\mathcal K}
-\newcommand{\SM}{\mathcal M}
-\newcommand{\SN}{\mathcal N}
-\newcommand{\SP}{\mathcal P}
-\newcommand{\SQ}{\mathcal Q}
-\newcommand{\SR}{\mathcal R}
-\newcommand{\ST}{\mathcal T}
-\newcommand{\SU}{\mathcal U}
-\newcommand{\SV}{\mathcal V}
-\newcommand{\SW}{\mathcal W}
-\newcommand{\SX}{\mathcal X}
-\newcommand{\SY}{\mathcal Y}
-\newcommand{\SZ}{\mathcal Z}
-\newcommand{\rtor}{\mathbb{R} \to \mathbb{R}}
-\renewcommand{\bf}{\textbf} 
-\renewcommand{\it}{\textit}
-\newcommand{\md}{\textmd}
-\renewcommand{\sl}{\textsl}
-\renewcommand{\sc}{\textsc}
-\renewcommand{\sf}{\textsf}
-\renewcommand{\tt}{\texttt} 
-\renewcommand{\rm}{\textrm}
-\newcommand{\seq}[2]{\{#1_n\}_{n #2}}
-\newcommand{\fto}[1]{\mathbb{#1} \to \mathbb{#1}}
-\newcommand{\seqge}[2]{\{#1_n\}_{n \ge #2}}
-\newcommand{\seqin}[2]{\{#1_n\}_{n \in #2}}
-\newcommand{\psec}[1]{\section{Problem #1}}
-\newcommand{\pchap}[1]{\chapter{Problem #1}}
-\newcommand{\psubsec}[1]{\chapter{Problem #1}}
-\newcommand{\psecbb}[1]{\section{「Problem #1」}}
-\newcommand{\pchapbb}[1]{\section{「Problem #1」}}
-\newcommand{\psubsecbb}[1]{\section{「Problem #1」}}
 \newcommand{\note}[1]{\begin{flushright}
 ※ #1
 \end{flushright}}
-\newcommand{\quo}[1]{「#1」}
-\newcommand{\qquo}[1]{『#1』}
 \newcommand{\figc}[3]{
 \begin{figure}[ht]
 \centering
@@ -211,6 +48,23 @@
 \includegraphics[width=#1\textwidth]{#2}
 \end{figure}
 }
+% Environments
+\newenvironment{sproof}{\begin{subproof}[Subproof]}{\end{subproof}}
+\newenvironment{altsoln}{\begin{proof}[Alternative Solution]}{\end{proof}}
+\newenvironment{enum}{\begin{enumerate}}{\end{enumerate}}
+\newenvironment{enumbf}{\begin{enumerate}[font=\textbf]}{\end{enumerate}}
+\newenvironment{item}{\begin{itemize}}{\end{itemize}}
+\newenvironment{itembf}{\begin{itemize}[label=\color{maincolor}$\blacksquare$]}{\end{itemize}}
+% Answer Choices
+\newcommand{\sat}[4]{
+\bigskip
+
+\noindent$\textbf{(A) }#1 \qquad \textbf{(B) }#2 \qquad \textbf{(C) }#3 \qquad \textbf{(D) }#4$
+}
+\newcommand{\ans}[5]{\bigskip
+
+\noindent$\textbf{(A)}\ #1 \qquad\textbf{(B)}\ #2 \qquad\textbf{(C)}\ #3 \qquad\textbf{(D)}\ #4 \qquad\textbf{(E)}\ #5$}
+% Solution-Writing
 \newcommand{\bboxed}[1]{\color{maincolor}\boxed{#1}}
 \newenvironment{sol}[1]{\noindent\color{maincolor}\textbf{\textsf{Answer #1: }}\color{black}}{\hfill \color{maincolor}$\blacksquare$}
 \newcommand{\orr}{
@@ -221,14 +75,13 @@
 }
 \newcommand{\bblacksquare}{\hfill \color{maincolor}$\blacksquare$\color{black}}
 \newcommand{\bbold}[1]{\color{maincolor}\textbf{\textsf{#1} }\color{black}}
-\newcommand{\ans}[5]{\bigskip
-
-\noindent$\textbf{(A)}\ #1 \qquad\textbf{(B)}\ #2 \qquad\textbf{(C)}\ #3 \qquad\textbf{(D)}\ #4 \qquad\textbf{(E)}\ #5$}
 \newcommand{\prop}[1]{\color{maincolor}\textbf{\textsf{(#1)} }\color{black} }
-\newenvironment{itembf}{\begin{itemize}[label=\color{maincolor}$\blacksquare$]}{\end{itemize}}
 \newcommand{\bbigskip}{\bigskip
 
 \noindent}
+% Miscellaneous
+\newcommand{\yes}{\color{green!60!black}{\sffamily\textbf\checkmark}}
+\newcommand{\no}{\color{red}{\sffamily\textbf X}}
+\newcommand{\maybe}{\color{black!40}{\sffamily\textbf ?}}
 \renewcommand\thesection{\color{maincolor}\arabic{section}}
-\newcommand{\soll}{\section*{Solution}}
-\newcommand{\nsection}[1]{\newpage\section{#1}}
+
