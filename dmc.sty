@@ -1,0 +1,107 @@
+\ProvidesPackage{dmc}
+% Packages
+\usepackage{cancel}
+\usepackage{framed}
+\usepackage{graphicx, tipa}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{enumitem}
+\usepackage{asymptote}
+\usepackage{hyperref}
+\usepackage{fancyhdr}
+\usepackage{amsfonts}
+\usepackage[document]{ragged2e}
+\usepackage[b5j,total={6in, 8.25in}]{geometry}
+\usepackage{amsmath, amsfonts, amssymb, mathtools, versions}
+\usepackage{adjustbox}
+\usepackage[utf8]{inputenc}
+\usepackage{hyperref}
+\usepackage{float}
+\usepackage{anyfontsize}
+\usepackage{t1enc}
+\begin{asydef}
+//
+// Global Asymptote definitions can be put here.
+//
+usepackage("bm");
+texpreamble("\def\V#1{\bm{#1}}");
+\end{asydef}
+\def\A{A}
+\def\B{\V{B}}
+% Macros
+\newcommand{\ii}{\item}
+\newcommand{\latex}{\LaTeX{ }}
+\newcommand{\floor}[1]{\left\lfloor #1 \right\rfloor}
+\newcommand{\ceil}[1]{\left\lceil #1 \right\rceil}
+\newcommand{\overarc}[1]{{\setbox9=\hbox{#1}\ooalign{\resizebox{\wd9}{\height}{\texttoptiebar{\phantom{A}}}\cr#1}}}
+\newcommand{\asd}{, as desired.}
+\newcommand{\n}{\~{n}}
+\DeclareMathOperator{\arcsec}{arcsec}
+\DeclareMathOperator{\arccot}{arccot}
+\DeclareMathOperator{\arccsc}{arccsc}
+\DeclareMathOperator{\lcm}{lcm}
+\newcommand{\dd}[1]{\text{d}#1}
+\newcommand{\rep}[2]{\underbrace{#1}_{#2\text{ times}}}
+\newcommand{\spade}{\spadesuit}
+\newcommand{\heart}{\heartsuit}
+\newcommand{\dia}{\diamondsuit}
+\newcommand{\club}{\clubsuit}
+\newcommand{\soll}{\section*{Solution}}
+\newcommand{\nsection}[1]{\newpage\section{#1}}
+% Quotes, Notes & Figures
+\renewcommand{\quote}[2]{
+\begin{flushright}
+\textit{"#1"}\\
+--- #2
+\end{flushright}
+}
+\newcommand{\note}[1]{\begin{flushright}
+※ #1
+\end{flushright}}
+\newcommand{\figc}[3]{
+\begin{figure}[ht]
+\centering
+\includegraphics[width=#1\textwidth]{#2}
+\caption{#3}
+\end{figure}
+}
+\newcommand{\fig}[2]{
+\begin{figure}[ht]
+\centering
+\includegraphics[width=#1\textwidth]{#2}
+\end{figure}
+}
+% Environments
+\newenvironment{sproof}{\begin{subproof}[Subproof]}{\end{subproof}}
+\newenvironment{altsoln}{\begin{proof}[Alternative Solution]}{\end{proof}}
+\newenvironment{enum}{\begin{enumerate}}{\end{enumerate}}
+\newenvironment{enumbf}{\begin{enumerate}[font=\textbf]}{\end{enumerate}}
+\newenvironment{itembf}{\begin{itemize}[label=\color{maincolor}$\blacksquare$]}{\end{itemize}}
+% Answer Choices
+\newcommand{\sat}[4]{
+\bigskip
+
+\noindent$\textbf{(A) }#1 \qquad \textbf{(B) }#2 \qquad \textbf{(C) }#3 \qquad \textbf{(D) }#4$
+}
+\newcommand{\ans}[5]{\bigskip
+
+\noindent$\textbf{(A)}\ #1 \qquad\textbf{(B)}\ #2 \qquad\textbf{(C)}\ #3 \qquad\textbf{(D)}\ #4 \qquad\textbf{(E)}\ #5$}
+% Solution-Writing
+\newcommand{\bboxed}[1]{\color{maincolor}\boxed{#1}}
+\newenvironment{sol}[1]{\noindent\color{maincolor}\textbf{\textsf{Answer #1: }}\color{black}}{\hfill \color{maincolor}$\blacksquare$}
+\newcommand{\orr}{
+\begin{center}
+\color{maincolor}\textbf{\textsf{OR}}
+\end{center}
+\color{black}
+}
+\newcommand{\bblacksquare}{\hfill \color{maincolor}$\blacksquare$\color{black}}
+\newcommand{\bbold}[1]{\color{maincolor}\textbf{\textsf{#1} }\color{black}}
+\newcommand{\prop}[1]{\color{maincolor}\textbf{\textsf{(#1)} }\color{black} }
+\newcommand{\bbigskip}{\bigskip
+
+\noindent}
+% Miscellaneous
+\newcommand{\yes}{\color{green!60!black}{\sffamily\textbf\checkmark}}
+\newcommand{\no}{\color{red}{\sffamily\textbf X}}
+\newcommand{\maybe}{\color{black!40}{\sffamily\textbf ?}}
+\renewcommand\thesection{\color{maincolor}\arabic{section}}
