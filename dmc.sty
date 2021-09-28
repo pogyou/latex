@@ -1,6 +1,6 @@
 %Don't forget to put
 %\usepackage{dmc}
-%\definecolor{maincolor}{RGB}{88, 161, 173} 
+%\definecolor{maincolor}{RGB}{88, 161, 173} for DMC, \definecolor{maincolor}{RGB}{234, 153, 153} for KMMC
 %\renewcommand{\headrulewidth}{0pt}
 %\pagestyle{fancy} 
 %\fancyhf{}
@@ -8,6 +8,8 @@
 
 \ProvidesPackage{dmc}
 \setlength{\parindent}{0px} 
+\usepackage{sqrcaps}
+\usepackage[T1]{fontenc}
 \usepackage{cancel} 
 \usepackage{framed} 
 \usepackage{graphicx, tipa}
@@ -21,11 +23,9 @@
 \usepackage[b5j,total={6in, 8.25in}]{geometry}
 \usepackage{amsmath, amsfonts, amssymb, mathtools, versions}
 \usepackage{adjustbox}
-\usepackage[utf8]{inputenc}
 \usepackage{hyperref}
 \usepackage{float}
 \usepackage{anyfontsize}
-\usepackage{t1enc}
 \begin{asydef}
 //
 // Global Asymptote definitions can be put here.
