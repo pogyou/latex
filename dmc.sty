@@ -1,7 +1,12 @@
 \ProvidesPackage{dmc}
-% Packages
-\usepackage{cancel}
-\usepackage{framed}
+\definecolor{maincolor}{RGB}{88, 161, 173} 
+%sets maincolor to blue
+\pagestyle{fancy} 
+\fancyhf{}
+\setlength{\parindent}{0px} 
+%no paragraph indents
+\usepackage{cancel} 
+\usepackage{framed} 
 \usepackage{graphicx, tipa}
 \usepackage[dvipsnames]{xcolor}
 \usepackage{enumitem}
@@ -27,81 +32,38 @@ texpreamble("\def\V#1{\bm{#1}}");
 \end{asydef}
 \def\A{A}
 \def\B{\V{B}}
-% Macros
 \newcommand{\ii}{\item}
-\newcommand{\latex}{\LaTeX{ }}
 \newcommand{\floor}[1]{\left\lfloor #1 \right\rfloor}
 \newcommand{\ceil}[1]{\left\lceil #1 \right\rceil}
 \newcommand{\overarc}[1]{{\setbox9=\hbox{#1}\ooalign{\resizebox{\wd9}{\height}{\texttoptiebar{\phantom{A}}}\cr#1}}}
-\newcommand{\asd}{, as desired.}
-\newcommand{\n}{\~{n}}
 \DeclareMathOperator{\arcsec}{arcsec}
 \DeclareMathOperator{\arccot}{arccot}
 \DeclareMathOperator{\arccsc}{arccsc}
 \DeclareMathOperator{\lcm}{lcm}
-\newcommand{\dd}[1]{\text{d}#1}
-\newcommand{\rep}[2]{\underbrace{#1}_{#2\text{ times}}}
-\newcommand{\spade}{\spadesuit}
-\newcommand{\heart}{\heartsuit}
-\newcommand{\dia}{\diamondsuit}
-\newcommand{\club}{\clubsuit}
-\newcommand{\soll}{\section*{Solution}}
-\newcommand{\nsection}[1]{\newpage\section{#1}}
-% Quotes, Notes & Figures
-\renewcommand{\quote}[2]{
-\begin{flushright}
-\textit{"#1"}\\
---- #2
-\end{flushright}
-}
-\newcommand{\note}[1]{\begin{flushright}
-※ #1
-\end{flushright}}
-\newcommand{\figc}[3]{
-\begin{figure}[ht]
-\centering
-\includegraphics[width=#1\textwidth]{#2}
-\caption{#3}
-\end{figure}
-}
-\newcommand{\fig}[2]{
-\begin{figure}[ht]
-\centering
-\includegraphics[width=#1\textwidth]{#2}
-\end{figure}
-}
-% Environments
 \newenvironment{sproof}{\begin{subproof}[Subproof]}{\end{subproof}}
 \newenvironment{altsoln}{\begin{proof}[Alternative Solution]}{\end{proof}}
 \newenvironment{enum}{\begin{enumerate}}{\end{enumerate}}
 \newenvironment{enumbf}{\begin{enumerate}[font=\textbf]}{\end{enumerate}}
+% use for bold problem numbers
 \newenvironment{itembf}{\begin{itemize}[label=\color{maincolor}$\blacksquare$]}{\end{itemize}}
-% Answer Choices
-\newcommand{\sat}[4]{
-\bigskip
-
-\noindent$\textbf{(A) }#1 \qquad \textbf{(B) }#2 \qquad \textbf{(C) }#3 \qquad \textbf{(D) }#4$
-}
+% use for nice squares on itemize
 \newcommand{\ans}[5]{\bigskip
 
-\noindent$\textbf{(A)}\ #1 \qquad\textbf{(B)}\ #2 \qquad\textbf{(C)}\ #3 \qquad\textbf{(D)}\ #4 \qquad\textbf{(E)}\ #5$}
-% Solution-Writing
-\newcommand{\bboxed}[1]{\color{maincolor}\boxed{#1}}
-\newenvironment{sol}[1]{\noindent\color{maincolor}\textbf{\textsf{Answer #1: }}\color{black}}{\hfill \color{maincolor}$\blacksquare$}
+$\textbf{(A)}\ #1 \qquad\textbf{(B)}\ #2 \qquad\textbf{(C)}\ #3 \qquad\textbf{(D)}\ #4 \qquad\textbf{(E)}\ #5$}
+% use for answer choices
+\newcommand{\bboxed}[1]{\color{maincolor}\boxed{#1}
+% use for blue boxes
+\newenvironment{sol}[1]{\begin{framed}\color{maincolor}\textbf{\textsf{Answer #1: }}\color{black}}{\hfill \color{maincolor}$\blacksquare$\end{framed}}
+% use for solution format
 \newcommand{\orr}{
 \begin{center}
-\color{maincolor}\textbf{\textsf{OR}}
+\noindent OR
 \end{center}
-\color{black}
 }
-\newcommand{\bblacksquare}{\hfill \color{maincolor}$\blacksquare$\color{black}}
-\newcommand{\bbold}[1]{\color{maincolor}\textbf{\textsf{#1} }\color{black}}
-\newcommand{\prop}[1]{\color{maincolor}\textbf{\textsf{(#1)} }\color{black} }
-\newcommand{\bbigskip}{\bigskip
-
-\noindent}
-% Miscellaneous
-\newcommand{\yes}{\color{green!60!black}{\sffamily\textbf\checkmark}}
-\newcommand{\no}{\color{red}{\sffamily\textbf X}}
-\newcommand{\maybe}{\color{black!40}{\sffamily\textbf ?}}
-\renewcommand\thesection{\color{maincolor}\arabic{section}}
+% use between two solutions to the same problem
+\newcommand{\bbold}[1]{\color{maincolor}\textbf{\textsf{#1} }\color{black}} 
+% use for case titles or remark titles
+\newcommand{\prop}[1]{\color{maincolor}\textbf{\textsf{(#1)} }\color{black} } 
+%proposer name
+\newcommand{\phead}[1]{\noindent\textbf{\textsf{Problem #1:}}} 
+%\phead{2} will produce heading Problem 2:
