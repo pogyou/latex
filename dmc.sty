@@ -1,6 +1,12 @@
+%Don't forget to put
+%\definecolor{maincolor}{RGB}{88, 161, 173} 
+%\renewcommand{\headrulewidth}{0pt}
+%\pagestyle{fancy} 
+%\fancyhf{}
+%at the start
+
 \ProvidesPackage{dmc}
 \setlength{\parindent}{0px} 
-%no paragraph indents
 \usepackage{cancel} 
 \usepackage{framed} 
 \usepackage{graphicx, tipa}
@@ -40,26 +46,20 @@ texpreamble("\def\V#1{\bm{#1}}");
 \newenvironment{altsoln}{\begin{proof}[Alternative Solution]}{\end{proof}}
 \newenvironment{enum}{\begin{enumerate}}{\end{enumerate}}
 \newenvironment{enumbf}{\begin{enumerate}[font=\textbf]}{\end{enumerate}}
-% use for bold problem numbers
 \newenvironment{itembf}{\begin{itemize}[label=\color{maincolor}$\blacksquare$]}{\end{itemize}}
-% use for nice squares on itemize
 \newcommand{\ans}[5]{\bigskip
 
 $\textbf{(A)}\ #1 \qquad\textbf{(B)}\ #2 \qquad\textbf{(C)}\ #3 \qquad\textbf{(D)}\ #4 \qquad\textbf{(E)}\ #5$}
-% use for answer choices
-\newcommand{\bboxed}[1]{\color{maincolor}\boxed{#1}
-% use for blue boxes
-\newenvironment{sol}[1]{\begin{framed}\color{maincolor}\textbf{\textsf{Answer #1: }}\color{black}}{\hfill \color{maincolor}$\blacksquare$\end{framed}}
-% use for solution format
+\newcommand{\bboxed}[1]{\color{maincolor}\boxed{#1}}
+\newenvironment{sol}[1]
+{\begin{framed}\textbf{\textsf{Answer #1: }}\color{black}
+}
+{\hfill \color{maincolor}$\blacksquare$\color{black}\end{framed}}
 \newcommand{\orr}{
 \begin{center}
 OR
 \end{center}
 }
-% use between two solutions to the same problem
 \newcommand{\bbold}[1]{\color{maincolor}\textbf{\textsf{#1} }\color{black}} 
-% use for case titles or remark titles
 \newcommand{\prop}[1]{\color{maincolor}\textbf{\textsf{(#1)} }\color{black} } 
-%proposer name
-\newcommand{\phead}[1]{\noindent\textbf{\textsf{Problem #1:}}} 
-%\phead{2} will produce heading Problem 2:
+\newcommand{\bhead}[1]{\noindent\textbf{\textsf{#1}}} 
