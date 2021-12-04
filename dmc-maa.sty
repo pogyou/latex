@@ -45,7 +45,9 @@ usepackage("mathptmx");
 $\textbf{(A)}\ #1 \qquad\textbf{(B)}\ #2 \qquad\textbf{(C)}\ #3 \qquad\textbf{(D)}\ #4 \qquad\textbf{(E)}\ #5$}
 \newcommand{\bboxed}[1]{\color{maincolor}\boxed{#1}}
 \newenvironment{sol}[1]
-{\textbf{Answer (#1): }}
+{\bigskip
+
+\textbf{Answer (#1): }}
 {}
 \newcommand{\orr}{
 \begin{center}
@@ -53,5 +55,5 @@ $\textbf{(A)}\ #1 \qquad\textbf{(B)}\ #2 \qquad\textbf{(C)}\ #3 \qquad\textbf{(D
 \end{center}
 }
 \newcommand{\bbold}[1]{\textbf{#1}} 
-\newcommand{\prop}[1]{\textbf{#1}} 
+\newcommand{\prop}[1]{\textbf{(#1)}} 
 \usepackage{newtxtext,newtxmath}
