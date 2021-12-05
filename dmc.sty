@@ -33,7 +33,6 @@ texpreamble("\def\V#1{\bm{#1}}");
 \end{asydef}
 \def\A{A}
 \def\B{\V{B}}
-\newcommand{\ii}{\item}
 \newcommand{\floor}[1]{\left\lfloor #1 \right\rfloor}
 \newcommand{\ceil}[1]{\left\lceil #1 \right\rceil}
 \newcommand{\overarc}[1]{{\setbox9=\hbox{#1}\ooalign{\resizebox{\wd9}{\height}{\texttoptiebar{\phantom{A}}}\cr#1}}}
@@ -41,11 +40,7 @@ texpreamble("\def\V#1{\bm{#1}}");
 \DeclareMathOperator{\arccot}{arccot}
 \DeclareMathOperator{\arccsc}{arccsc}
 \DeclareMathOperator{\lcm}{lcm}
-\newenvironment{sproof}{\begin{subproof}[Subproof]}{\end{subproof}}
-\newenvironment{altsoln}{\begin{proof}[Alternative Solution]}{\end{proof}}
-\newenvironment{enum}{\begin{enumerate}}{\end{enumerate}}
 \newenvironment{enumbf}{\begin{enumerate}[font=\textbf]}{\end{enumerate}}
-\newenvironment{itembf}{\begin{itemize}[label=\color{maincolor}$\blacksquare$]}{\end{itemize}}
 \newcommand{\ans}[5]{\bigskip
 
 $\textbf{(A)}\ #1 \qquad\textbf{(B)}\ #2 \qquad\textbf{(C)}\ #3 \qquad\textbf{(D)}\ #4 \qquad\textbf{(E)}\ #5$}
@@ -62,3 +57,4 @@ OR
 \newcommand{\bbold}[1]{\color{maincolor}\textbf{\textsf{#1} }\color{black}} 
 \newcommand{\prop}[1]{\color{maincolor}\textbf{\textsf{(#1)} }\color{black} } 
 \newcommand{\bhead}[1]{\textbf{\textsf{\Large #1}}\normalsize} 
+\newcommand{\bbhead}[1]{\bigskip\textbf{\textsf{\Large #1}}\normalsize\bigskip} 
