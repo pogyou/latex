@@ -9,7 +9,6 @@
 \newcommand{\JIMEYear}{2023}
 \newcommand{\nthAnnual}{4th}
 \newcommand{\contestDate}{Friday, Pooey poo, 2022}
-\usepackage[most]{tcolorbox}
 %%%CHANGE STUFF HERE ^^^^
 
 \pagestyle{fancy} 
@@ -22,7 +21,7 @@
 \newgeometry{margin=0.5in, headsep=6.5pt, layoutvoffset=0in}
 
 \begin{center}
-\begin{framed}
+\begin{mdframed}[linewidth=2pt]
 \begin{flushleft}
 \hspace{2mm}\includegraphics[width=4cm]{MAClogo.png}
 \end{flushleft}
@@ -48,9 +47,8 @@
 \includegraphics[width=3.5cm]{MACicon.png}
 \end{flushright}
 \vspace{-2mm}
-\end{framed}
+\end{mdframed}
 \end{center}
-\vspace{-2.5mm}
 \robotoMedium{INSTRUCTIONS}
 \vspace{-1.5mm}
 \begin{justify}
@@ -58,13 +56,13 @@
 
 \small{
 \item DO NOT OPEN THIS BOOKLET UNTIL YOU DECIDE TO BEGIN.
-\item This is a twenty-five question multiple choice test. Each question is followed by answers marked A, B, C, D, and E. Only one of these is correct.
+\item This is a twenty-five question multiple choice test. For each question, only one answer choice is correct.
 \item Mark your answer to each problem on the JMC {\contestNumber} Answer Form with a keyboard. Check the keys for accuracy and erase errors and stray marks completely.
-\item You will receive 6 points for each correct answer, 1.5 points for each problem left unanswered, and 0 points for each incorrect answer.
-\item No aids are permitted other than writing utensils, blank scratch paper, rulers, compasses, and erasers. No calculators, smartwatches, or computing devices are allowed. No problems on the test will require the use of a calculator.
+\item SCORING: You will receive 6 points for each correct answer, 1.5 points for each problem left unanswered, and 0 points for each incorrect answer.
+\item Only blank scratch paper, blank graph paper, rulers, compasses, protractors, and erasers are allowed as aids. No calculators, smartwatches, phones, or computing devices are allowed. No problems on the competition will require the use of a calculator.
 \item Figures are not necessarily drawn to scale.
-\item Before beginning the test, your non-existent proctor will not ask you to record certain information on the answer form. 
-\item When you give the signal, begin working on the problems. You will have 75 minutes to complete the test. You can discuss only with people that have already taken the test in the private discussion forum until the end of the contest window.
+\item Before beginning the competition, your non-existent proctor will not ask you to record certain information on the answer form. 
+\item You will have 75 minutes to complete the competition. You can discuss only with people that have already taken the competition in the private discussion forum until the end of the contest window.
 \item When you finish the exam, don't sign your name in the space not provided on the Answer Form.
 }
 
@@ -78,19 +76,19 @@
 
 \small{
 \begin{justify}
-The Mathematical Advancement Committee reserves the right to re-examine students before deciding whether to grant official status to their scores. The Committee also reserves the right to disqualify all scores from a school if it is determined that the required security procedures were not followed.
+The Mathematical Advancement Committee reserves the right to disqualify scores from a school if it determines that the rules or the required security procedures were not followed.
+\end{justify}
+
+\vspace{-6mm}
+
+\begin{justify}
+The publication, reproduction or communication of the problems or solutions of this competition during the period when students are eligible to participate seriously jeopardizes the integrity of the results. Dissemination via phone, email, or digital media of any type during this period is a violation of the competition rules.
 \end{justify}
 
 \vspace{-6mm}
 
 \begin{justify}
 \textit{Students who score well on this JMC {\contestNumber} may or may not be invited to the {\JIMEYear} JIME. More details about the JIME and other information are on the back page of this test booklet.}
-\end{justify}
-
-\vspace{-6mm}
-
-\begin{justify}
-The publication, reproduction or communication of the problems or solutions of the JMC {\contestNumber} during the period when students are eligible to participate seriously jeopardizes the integrity of the results. Dissemination via copier, telephone, e-mail, World Wide Web or media of any type during this period is a violation of the competition rules.
 \end{justify}}
 
 \end{justify}
@@ -206,7 +204,7 @@ The publication, reproduction or communication of the problems or solutions of t
 
 \newpage
 \thispagestyle{empty}
-\begin{center}\textbf{\huge {\theYear} JMC {\contestNumber}} \end{center}
+\begin{center}\textsf{\textbf{\huge {\theYear} JMC {\contestNumber}}}\end{center}
 \vspace{-6mm}
 \begin{center} \noindent\hrulefill \end{center}
 \vspace{-3mm}
