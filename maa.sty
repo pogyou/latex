@@ -1,0 +1,32 @@
+\ProvidesPackage{maa}
+\setlength{\parindent}{0px} 
+\usepackage[b5j,paperwidth=5.5in, paperheight=8.5in, margin=0.5in, headsep=6.5pt, layoutvoffset=0.23in]{geometry}
+\usepackage{sqrcaps}
+\usepackage[T1]{fontenc}
+\usepackage{cancel} 
+\usepackage{framed} 
+\usepackage{graphicx}
+\usepackage{tipa}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{enumitem}
+\usepackage{asymptote}
+\usepackage{hyperref}
+\usepackage{fancyhdr}
+\usepackage[document]{ragged2e}
+\usepackage{amsmath, amsfonts, amssymb, mathtools, versions}
+\usepackage{newtxtext,newtxmath}
+\usepackage{adjustbox}
+\usepackage{hyperref}
+\usepackage{float}
+\usepackage{anyfontsize}
+\begin{asydef}
+usepackage("mathptmx");
+\end{asydef}
+\newcommand{\overarc}[1]{{\setbox9=\hbox{#1}\ooalign{\resizebox{\wd9}{\height}{\texttoptiebar{\phantom{A}}}\cr#1}}}
+\DeclareMathOperator{\arcsec}{arcsec}
+\DeclareMathOperator{\arccot}{arccot}
+\DeclareMathOperator{\arccsc}{arccsc}
+\DeclareMathOperator{\lcm}{lcm}
+\newcommand{\ans}[5]{\vspace{2mm}
+
+$\textbf{(A)}\ #1 \qquad\textbf{(B)}\ #2 \qquad\textbf{(C)}\ #3 \qquad\textbf{(D)}\ #4 \qquad\textbf{(E)}\ #5$}
