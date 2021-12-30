@@ -1,5 +1,6 @@
 \documentclass[10pt, twoside]{article}
 \usepackage{maa}
+\usepackage{roboto}
 \definecolor{maincolor}{RGB}{234, 153, 153}
 \renewcommand{\headrulewidth}{0pt}
 %%%CHANGE STUFF HERE vvvv
@@ -23,36 +24,34 @@
 \thispagestyle{empty}
 
 \begin{center}
-\begin{framed}
+\begin{mdframed}[linewidth=2pt]
 \begin{flushleft}
-\hspace{2mm}\includegraphics[width=4cm]{JMC/MAClogo.png}
+\hspace{2mm}\includegraphics[width=4.5cm]{KMMC/NewKMMC.PNG}
 \end{flushleft}
 \vspace{0mm}
 \begin{flushleft}
-\hspace{2mm}\normalsize{{\fontfamily{phv}\selectfont {\competitionName}}}
+\hspace{2mm}\normalsize{{\robotoRegular{\competitionName}}}
 \end{flushleft}
 \vspace{-4mm}
 \begin{flushleft}
-\hspace{2mm}\normalsize{{\fontfamily{phv}\selectfont {\nthAnnual} Annual}}
+\hspace{2mm}\normalsize{{\robotoRegular{{\nthAnnual} Annual}}}
 \end{flushleft}
 \vspace{3mm}
 \begin{flushleft}
-\hspace{1.5mm}\fontsize{30}{40}{{\fontfamily{phv}\selectfont {\contestName} \contestNumber
-}}
+\hspace{1.5mm}\fontsize{30}{40}{{\robotoRegular{\textbf{{\contestName} \contestNumber}}}}
 \end{flushleft}
 \vspace{-4mm}
 \begin{flushleft}
-\hspace{2mm}\normalsize{{\fontfamily{phv}\selectfont {\contestDate}}}
+\hspace{2mm}\normalsize{{\robotoRegular{\contestDate}}}
 \end{flushleft}
 \begin{flushright}
-\vspace{-40mm}
-\includegraphics[width=3.5cm]{JMC/MACicon.png}
+\vspace{-52mm}
+\includegraphics[width=3.2cm]{KMMC/karate87328.PNG}
 \end{flushright}
-\vspace{-2mm}
-\end{framed}
+\vspace{1.5mm}
+\end{mdframed}
 \end{center}
-\vspace{-2.5mm}
-\textbf{INSTRUCTIONS}
+\textsf{\textbf{INSTRUCTIONS}}
 \vspace{-1.5mm}
 \begin{justify}
 \begin{enumerate}[noitemsep, nolistsep, leftmargin=*]
@@ -205,7 +204,7 @@ The publication, reproduction or communication of the problems or solutions of t
 
 \newpage
 \thispagestyle{empty}
-\begin{center}\textbf{\huge {\theYear} {\contestName} {\contestNumber}} \end{center}
+\begin{center}\textsf{\textbf{\huge {\theYear} {\contestName} {\contestNumber}}} \end{center}
 \vspace{-6mm}
 \begin{center} \noindent\hrulefill \end{center}
 \vspace{-3mm}
