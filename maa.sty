@@ -16,6 +16,7 @@
 \usepackage[document]{ragged2e}
 \usepackage{amsmath, amsfonts, amssymb, mathtools, versions}
 \usepackage{newtxtext,newtxmath}
+\usepackage{roboto}
 \usepackage{adjustbox}
 \usepackage{hyperref}
 \usepackage{float}
@@ -28,6 +29,42 @@ usepackage("mathptmx");
 \DeclareMathOperator{\arccot}{arccot}
 \DeclareMathOperator{\arccsc}{arccsc}
 \DeclareMathOperator{\lcm}{lcm}
+
 \newcommand{\ans}[5]{\vspace{2mm}
 
 $\textbf{(A)}\ #1 \qquad\textbf{(B)}\ #2 \qquad\textbf{(C)}\ #3 \qquad\textbf{(D)}\ #4 \qquad\textbf{(E)}\ #5$}
+
+
+%For bolded items in enumerate
+\newenvironment{enumbf}{\begin{enumerate}[font=\textbf]}{\end{enumerate}}
+
+%For colored boxed answer
+\newcommand{\bboxed}[1]{\color{maincolor}\boxed{#1}}
+
+%For solutions
+\newenvironment{sol}[1]
+{\bigskip
+
+\begin{mdframed}[linewidth=3pt,leftline=true,rightline=false,bottomline=false,topline=false,linecolor=maincolor]\color{maincolor}\textbf{\textsf{Answer (#1): }}\bigskip \color{black}
+
+}
+{\hfill \color{maincolor}$\blacksquare$\color{black}\end{mdframed}}
+
+%For alternate solutions
+\newcommand{\orr}{
+\begin{center}
+\textbf{OR}
+\end{center}
+}
+
+%For remarks
+\newcommand{\bbold}[1]{\color{maincolor}\textbf{\textsf{#1} }\color{black}} 
+
+%For problem proposers
+\newcommand{\prop}[1]{\color{maincolor}\textbf{\textsf{(#1)} }\color{black} } 
+
+%For headings (manual bigskips)
+\newcommand{\bhead}[1]{\textbf{\textsf{\Large #1}}\normalsize}
+
+%For headings (automatic bigskips)
+\newcommand{\bbhead}[1]{\bigskip\textbf{\textsf{\Large #1}}\normalsize\bigskip} 
