@@ -21,9 +21,9 @@
 \usepackage{hyperref}
 \usepackage{float}
 \usepackage{anyfontsize}
-\usepackage{microtype}
 \begin{asydef}
-usepackage("mathptmx");
+usepackage("newtxtext");
+usepackage("newtxmath");
 \end{asydef}
 \newcommand{\overarc}[1]{{\setbox9=\hbox{#1}\ooalign{\resizebox{\wd9}{\height}{\texttoptiebar{\phantom{A}}}\cr#1}}}
 \DeclareMathOperator{\arcsec}{arcsec}
@@ -50,14 +50,6 @@ $\textbf{(A)}\ #1 \qquad\textbf{(B)}\ #2 \qquad\textbf{(C)}\ #3 \qquad\textbf{(D
 
 }
 {\hfill \color{maincolor}$\blacksquare$\color{black}\end{mdframed}}
-\newenvironment{jmosol}
-{\bigskip
-
-\begin{mdframed}[linewidth=3pt,leftline=true,rightline=false,bottomline=false,topline=false,linecolor=maincolor,backgroundcolor=maincolor!10]\color{maincolor}\textbf{\textsf{Solution: }}\bigskip \color{black}
-
-}
-{\hfill \color{maincolor}$\blacksquare$\color{black}\end{mdframed}}
-
 
 %For alternate solutions
 \newcommand{\orr}{
