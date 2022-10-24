@@ -1,0 +1,72 @@
+\ProvidesPackage{dmc-inter}
+\setlength{\parindent}{0px} 
+\usepackage{sqrcaps}
+\usepackage[T1]{fontenc}
+\usepackage{cancel} 
+\usepackage{framed} 
+\usepackage{mdframed}
+\usepackage{graphicx, tipa}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{enumitem}
+\usepackage{asymptote}
+\usepackage{hyperref}
+\usepackage{fancyhdr}
+\usepackage{amsfonts}
+\usepackage[document]{ragged2e}
+\usepackage[b5j,total={6in, 8.25in}]{geometry}
+\usepackage{amsmath, amsfonts, amssymb, mathtools, versions}
+\usepackage[scaled=.9]{inter}
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage{sfmath}
+\usepackage{adjustbox}
+\usepackage{hyperref}
+\usepackage{float}
+\usepackage{anyfontsize}
+\begin{asydef}
+usepackage("inter");
+usepackage("sfmath");
+\end{asydef}
+\newcommand{\overarc}[1]{{\setbox9=\hbox{#1}\ooalign{\resizebox{\wd9}{\height}{\texttoptiebar{\phantom{A}}}\cr#1}}}
+\DeclareMathOperator{\arcsec}{arcsec}
+\DeclareMathOperator{\arccot}{arccot}
+\DeclareMathOperator{\arccsc}{arccsc}
+\DeclareMathOperator{\lcm}{lcm}
+
+%For bolded items in enumerate
+\newenvironment{enumbf}{\begin{enumerate}[font=\textbf]}{\end{enumerate}}
+
+%For answer choices
+\newcommand{\ans}[5]{\bigskip
+
+$\textbf{(A)}\ #1 \qquad\textbf{(B)}\ #2 \qquad\textbf{(C)}\ #3 \qquad\textbf{(D)}\ #4 \qquad\textbf{(E)}\ #5$}
+
+%For colored boxed answer
+\newcommand{\bboxed}[1]{\color{maincolor}\boxed{#1}}
+
+%For solutions
+\newenvironment{sol}[1]
+{\bigskip
+
+\begin{mdframed}[linewidth=3pt,leftline=true,rightline=false,bottomline=false,topline=false,linecolor=maincolor,backgroundcolor=maincolor!10]\color{maincolor}\textbf{\textsf{Answer (#1): }}\bigskip \color{black}
+
+}
+{\hfill \color{maincolor}$\blacksquare$\color{black}\end{mdframed}}
+
+%For alternate solutions
+\newcommand{\orr}{
+\begin{center}
+\textbf{OR}
+\end{center}
+}
+
+%For remarks
+\newcommand{\bbold}[1]{\color{maincolor}\textbf{\textsf{#1} }\color{black}} 
+
+%For problem proposers
+\newcommand{\prop}[1]{\color{maincolor}\textbf{\textsf{(#1)} }\color{black} } 
+
+%For headings (manual bigskips)
+\newcommand{\bhead}[1]{\textbf{\textsf{\Large #1}}\normalsize}
+
+%For headings (automatic bigskips)
+\newcommand{\bbhead}[1]{\bigskip\textbf{\textsf{\Large #1}}\normalsize\bigskip} 
